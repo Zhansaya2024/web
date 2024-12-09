@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кіру</title>
+    <title>Тіркелу</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
         /* Артқы фонды сурет ретінде қою */
@@ -49,7 +49,7 @@
         }
 
         .auth-form button {
-            background-color: #007bff;
+            background-color: #28a745;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -59,40 +59,46 @@
         }
 
         .auth-form button:hover {
-            background-color: #0056b3;
+            background-color: #218838;
         }
 
-        .auth-form .register-link {
+        .auth-form .login-link {
             text-align: center;
             margin-top: 10px;
         }
 
-        .auth-form .register-link a {
+        .auth-form .login-link a {
             color: #007bff;
             text-decoration: none;
         }
 
-        .auth-form .register-link a:hover {
+        .auth-form .login-link a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
 
-    <!-- Кіру формасы -->
+    <!-- Тіркелу формасы -->
     <div class="auth-container">
-        <form class="auth-form" action="login_process.php" method="POST">
-            <h2>Кіру</h2>
+        <form class="auth-form" action="register_process.php" method="POST">
+            <h2>Тіркелу</h2>
             <label for="username">Пайдаланушы аты</label>
             <input type="text" id="username" name="username" required>
+
+            <label for="email">Электронды пошта</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="password">Құпия сөз</label>
             <input type="password" id="password" name="password" required>
 
-            <button type="submit">Кіру</button>
+            <label for="confirm-password">Құпия сөзді растау</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
 
-            <div class="register-link">
-                <p>Тіркелмедіңіз бе? <a href="register.php">Тіркеліңіз</a></p>
+            <button type="submit">Тіркелу</button>
+
+            <div class="login-link">
+                <p>Аккаунтыңыз бар ма? <a href="login.php">Кіру</a></p>
             </div>
         </form>
     </div>
